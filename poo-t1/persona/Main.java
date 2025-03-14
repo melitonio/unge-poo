@@ -1,8 +1,9 @@
-package clasesobjetos;
+package persona;
 
 import java.util.Calendar;
 
-public class Persona {
+class Persona {
+
     private String nombre;
     private String apellidos;
     private String fechaNacimiento; // formato dd/mm/aaaa
@@ -69,7 +70,7 @@ public class Persona {
         return nombre + " " + apellidos;
     }
 
-    public void imprimir() {
+    public void mostrarInformacion() {
         int year = Calendar.getInstance().get(Calendar.YEAR);
         System.out.println("### DATOS PERSONALES ###");
         System.out.println("\tNombre: " + nombre + " " + apellidos);
@@ -80,17 +81,17 @@ public class Persona {
         System.out.println();
     }
 
-    public String saludo() {
-        // Calcular la edad
+    public String saludar() {
         int year = Calendar.getInstance().get(Calendar.YEAR);
         int h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 
         // Formatear el mensaje de saludo
-        String mensaje = String.format(
-                "Hola,\n%s %s, tu sexo es %s, tu peso es de %.1fKg \n" +
-                        "y tu edad es de %d anios.\n"+ 
-                        "Que tengas un buen dia. Son las %dH.",
-                this.nombre, this.apellidos, this.sexo, this.peso, this.edad(year), h);
+        String mensaje = String.format("""
+                Hola, soy %s, de sexo %s, peso %.1fKg y edad %d años.
+                Son las %dH y vamos a comenzar con el trabajo en grupo.
+                
+                """,
+                this.nombreCompleto(), this.sexo, this.peso, this.edad(year), h);
         return mensaje;
     }
 
@@ -104,4 +105,24 @@ public class Persona {
         return edad(year) > p.edad(year);
     }
 
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Persona p1 = new Persona("Juan", "Belope", "01/01/2000", 'M', 70);
+        Persona p2 = new Persona("Maria", "Nchama", "01/01/1990", 'F', 60);
+
+        p1.mostrarInformacion();
+        p2.mostrarInformacion();
+
+        System.out.println(p1.saludar());
+        System.out.println(p2.saludar());
+
+        System.out.println(p1.nombreCompleto() + " es mayor de edad: " + p1.esMayorDeEdad());
+        System.out.println(p2.nombreCompleto() + " es mayor de edad: " + p2.esMayorDeEdad());
+
+        System.out.println(p1.nombreCompleto() + " es mayor que " + p2.nombreCompleto() + ": " + p1.esMayorQue(p2));
+        System.out.println(p2.nombreCompleto() + " es mayor que " + p1.nombreCompleto() + ": " + p2.esMayorQue(p1));
+    }
 }
