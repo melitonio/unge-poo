@@ -6,6 +6,11 @@ class Coche {
     String marca;
     String color;
     int velocidad;
+
+    // Método para acelerar
+    public void acelerar() {
+        velocidad += 5;
+    }
 }
 
 // Definimos la clase principal
@@ -22,7 +27,18 @@ public class Main {
         coche2.color = "Azul";
         coche2.velocidad = 140;
 
-        System.out.println("El coche 1 es un " + coche1.marca + " de color " + coche1.color);
-        System.out.println("El coche 2 es un " + coche2.marca + " de color " + coche2.color);
+        System.out.println("El coche 1 es un " + coche1.marca + " de color " + coche1.color + " y va a "
+        + coche1.velocidad + " km/h");
+        System.out.println("El coche 2 es un " + coche2.marca + " de color " + coche2.color + " y va a "
+        + coche2.velocidad + " km/h");
+        
+        coche1.acelerar();
+        coche2.acelerar();
+        System.err.println();
+
+        System.out.println("El coche 1 es un " + coche1.marca + " de color " + coche1.color + " y va a "
+                + coche1.velocidad + " km/h");
+        System.out.println("El coche 2 es un " + coche2.marca + " de color " + coche2.color + " y va a "
+                + coche2.velocidad + " km/h");
     }
 }

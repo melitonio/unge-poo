@@ -11,7 +11,7 @@ class Estudiante {
     }
 
     void presentarse() {
-        System.out.println("Hola, soy " + nombre + " y estudio " + carrera);
+        System.out.println("Hola, soy " + nombre + ", tengo " + edad + " años y estudio " + carrera);
     }
 }
 

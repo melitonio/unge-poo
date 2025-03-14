@@ -1,7 +1,7 @@
 package maquinaboletos;
 
 public class MaquinaBoletos {
-    private double precio;
+    private final double precio;
     private double saldo;
     private double total;
 

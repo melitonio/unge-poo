@@ -2,12 +2,12 @@ package estudiante2;
 
 public class Estudiante {
     private String nombre;
-    private String id;
+    private final String matricula;
     private int creditos;
 
-    public Estudiante(String nombre, String id) {
+    public Estudiante(String nombre, String matricula) {
         this.nombre = nombre;
-        this.id = id;
+        this.matricula = matricula;
         this.creditos = 0;
     }
 
@@ -19,8 +19,8 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public String getId() {
-        return this.id;
+    public String getMatricula() {
+        return this.matricula;
     }
 
     public int getCreditos() {
@@ -28,11 +28,11 @@ public class Estudiante {
     }
 
     public String getNombreUsuario() {
-        return nombre.substring(0, 4) + id.substring(0, 3);
+        return nombre.substring(0, 4) + matricula.substring(0, 3);
     }
 
     public void imprimir() {
-        System.out.println(nombre + " (" + id + ")" + " creditos: " + creditos);
+        System.out.println(nombre + " (" + matricula + ")" + " creditos: " + creditos);
     }
 
     public void sumarCreditos(int creditos) {
