@@ -34,6 +34,8 @@ public class Main {
         
         coche1.acelerar();
         coche2.acelerar();
+        coche1.acelerar();
+        coche1.acelerar();
         System.err.println();
 
         System.out.println("El coche 1 es un " + coche1.marca + " de color " + coche1.color + " y va a "

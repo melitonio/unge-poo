@@ -87,7 +87,6 @@ class Inventario {
                 bw.write(p.nombre + "," + p.precio + "," + p.stock);
                 bw.newLine();
             }
-            System.out.println("Inventario guardado correctamente.");
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
@@ -100,8 +99,8 @@ public class Main {
     public static void main(String[] args) {
 
         Inventario inventario = new Inventario();
-
         inventario.cargarDesdeArchivo("inventario.txt");
+        System.out.println("Inventario cargado correctamente con " + inventario.productos.size() + " productos.");
 
         // Agregar productos de prueba
         inventario.agregarProducto(new Producto("Laptop", 1200.0, 10));
