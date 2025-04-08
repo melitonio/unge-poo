@@ -1,4 +1,4 @@
-package perro;
+package t1.perro;
 
 class Perro {
     String nombre;

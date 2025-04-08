@@ -1,4 +1,4 @@
-package calculadora;
+package t1.calculadora;
 
 class Calculadora {
 

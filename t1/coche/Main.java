@@ -1,4 +1,4 @@
-package coche;
+package t1.coche;
 
 // Definimos la clase (molde)
 class Coche {

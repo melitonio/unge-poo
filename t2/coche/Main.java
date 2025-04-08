@@ -1,5 +1,4 @@
-
-package coche;
+package t2.coche;
 
 class Coche {
     private String marca;

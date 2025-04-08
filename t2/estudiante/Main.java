@@ -1,5 +1,4 @@
-
-package estudiante;
+package t2.estudiante;
 
 class Estudiante {
     private String nombre;

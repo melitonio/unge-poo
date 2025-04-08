@@ -1,4 +1,4 @@
-package producto;
+package t1.producto;
 
 class Producto {
 

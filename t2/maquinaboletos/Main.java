@@ -1,6 +1,6 @@
-package maquinaboletos;
+package t2.maquinaboletos;
 
-public class MaquinaBoletos {
+class MaquinaBoletos {
     private final double precio;
     private double saldo;
     private double total;
@@ -31,7 +31,7 @@ public class MaquinaBoletos {
         if (saldo >= precio) {
             System.out.println("####################");
             System.out.println("# Boleto de futbol");
-            System.out.println("# Precio: " + precio + " XAF" );
+            System.out.println("# Precio: " + precio + " XAF");
             System.out.println("####################");
             System.out.println();
             total = total + precio;
@@ -39,5 +39,16 @@ public class MaquinaBoletos {
         } else {
             System.out.println("Saldo insuficiente");
         }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MaquinaBoletos mb = new MaquinaBoletos(1000);
+        mb.ingresarDinero(5000);
+        mb.imprimirBoleto();
+        mb.imprimirBoleto();
+        System.out.println("Saldo restante: " + mb.getSaldo() + " XAF");
+        System.out.println("Total recaudado: " + mb.getTotal() + " XAF");
     }
 }

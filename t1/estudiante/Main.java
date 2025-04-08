@@ -1,4 +1,4 @@
-package estudiante;
+package t1.estudiante;
 
 class Estudiante {
 

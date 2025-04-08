@@ -1,4 +1,4 @@
-package monitor;
+package t1.monitor;
 
 class Monitor {
     private double pulgadas;

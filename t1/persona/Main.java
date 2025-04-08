@@ -1,4 +1,4 @@
-package persona;
+package t1.persona;
 
 import java.util.Calendar;
 
